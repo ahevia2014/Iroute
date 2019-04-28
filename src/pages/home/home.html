@@ -1,9 +1,28 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      IRoute
     </ion-title>
   </ion-navbar>
+
+  <form id="form">
+    <input id="from"  #from placeholder="From" value="Av holanda 3705" />
+    <input id="to" #to placeholder="To" value="av el rodeo 1393 lampa" />
+    <input type="checkbox" id="gr" #gr placeholder="Ver Grifos" value="grifos" />Mostrar Grifos
+    <input type="checkbox" id="pe" #pe placeholder="Ver Peajes" value="peajes" />Mostrar Peajes
+    <select id="mo" #mo name="modelo">
+        <option value="1">Volvo M</option>
+        <option value="2">Saab X22</option>
+        <option value="3">Mercedes ZZ</option>
+        <option value="4">Audi A1</option>
+    </select>
+  <!--  <input type="submit" value="GO"  />-->
+    <button ion-button icon-only (click)="calcularRuta()">
+      <ion-icon name="md-search"></ion-icon>
+    </button>
+</form>
+<button ion-button id="delete-button">Delete Selected Shape</button>
+
 </ion-header>
 
 <ion-content padding>
@@ -11,4 +30,8 @@
   <p>
     If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
   </p>
+
+<div id="color-palette"></div>
+  <div #map id="map"></div>
+  
 </ion-content>
